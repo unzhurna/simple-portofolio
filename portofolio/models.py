@@ -24,11 +24,11 @@ class Article(models.Model):
         return self.article_title
 
 class Project(models.Model):
-    project_name = models.CharField(max_length=100)
-    project_date = models.DateField()
-    description = models.TextField()
-    client_name = models.CharField(max_length=100)
-    demo_url = models.CharField(max_length=100)
+    project_name = models.CharField('Name', max_length=100)
+    project_date = models.DateField('Date')
+    project_url = models.URLField('Project URL', max_length=225)
+    project_thumb = models.ImageField('Thumbnail', upload_to='uploads/%Y/%m/%d/')
+    project_desc = models.TextField('Description')
 
     def __str__(self):
         return self.project_name

@@ -6,7 +6,8 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    projects = Project.objects.all()
+    #projects = Project.objects.all()
+    projects = Project.objects.order_by('project_date')[:6]
     form = ContactForm(request.POST or None)
 
     context = {

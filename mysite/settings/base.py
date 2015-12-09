@@ -130,15 +130,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_env', 'static_root')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static_in_pro', 'our_static'),
+    os.path.join(BASE_DIR, 'static', 'assets'),
 ]
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_env', 'media_root')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media_root')
 
 # TinyMCE Configuration
 # http://django-tinymce.readthedocs.org/en/latest/
