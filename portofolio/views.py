@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.core.mail import send_mail
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from .forms import *
 
@@ -15,7 +15,6 @@ def index(request):
         form_message = form.cleaned_data.get('message')
         to_email = [settings.EMAIL_HOST_USER]
         send_mail('Contact form message', form_message, form_email, to_email, fail_silently=False)
-        print(form.cleaned_data)
 
     context = {
         'projects': projects,
