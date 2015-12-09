@@ -39,3 +39,12 @@ class Setting(models.Model):
 
     def __str__(self):
         return self.setting_name
+
+class Experience(models.Model):
+    company = models.CharField(max_length=200)
+    title = models.CharField(max_length=100)
+    location = models.CharField(max_length=200)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.company

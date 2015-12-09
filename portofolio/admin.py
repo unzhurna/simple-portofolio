@@ -1,4 +1,5 @@
 from django.contrib import admin
+#from .forms import SettingForm
 from .models import *
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -11,6 +12,10 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class SettingAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'setting_value')
+    fieldsets = [
+        (None,               {'fields': ['setting_name']}),
+        ('Value', {'fields': ['setting_value'], 'classes': ['collapse']}),
+    ]
 
 # Register your models here.
 admin.site.register(Article, ArticleAdmin)
