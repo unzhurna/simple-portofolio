@@ -21,7 +21,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^portofolio/', include('portofolio.urls')),
-    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 

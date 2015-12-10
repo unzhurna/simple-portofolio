@@ -1,5 +1,4 @@
 from django.db import models
-from tinymce import models as tinymce_models
 
 # Create your models here.
 class Category(models.Model):
@@ -16,7 +15,7 @@ class Article(models.Model):
     article_author = models.CharField(max_length=100)
     article_title = models.CharField('Title', max_length=255)
     article_slug = models.CharField('Slug', max_length=255)
-    article_content = tinymce_models.HTMLField('Content')
+    article_content = models.TextField('Content')
     publish_date = models.DateTimeField(auto_now_add=True, auto_now=False)
     modify_date = models.DateTimeField(auto_now_add=False, auto_now=True)
 
