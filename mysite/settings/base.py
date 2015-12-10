@@ -142,19 +142,19 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media_root')
 
 # TinyMCE Configuration
 # http://django-tinymce.readthedocs.org/en/latest/
-#DJANGO_SETTINGS_MODULE = 'testtinymce.settings'
 
-TINYMCE_JS_URL = os.path.join(STATIC_ROOT, 'tiny_mce/init_tinymce.js')
-TINYMCE_DEFAULT_CONFIG = {
-    'plugins': [
-        'advlist autolink lists link image charmap print preview anchor',
-        'searchreplace visualblocks code fullscreen',
-        'insertdatetime media table contextmenu paste code'
-    ],
-    'toolbar': 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-    'theme': 'modern',
-    'cleanup_on_startup': True,
-    'custom_undo_redo_levels': 10,
-}
-TINYMCE_SPELLCHECKER = True
-TINYMCE_COMPRESSOR = True
+# TINYMCE_JS_URL = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root', 'tiny_mce', 'tiny_mce_src.js')
+# TINYMCE_JS_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root', 'tiny_mce')
+# TINYMCE_DEFAULT_CONFIG = {
+#     'plugins': [
+#         'advlist autolink lists link image charmap print preview anchor',
+#         'searchreplace visualblocks code fullscreen',
+#         'insertdatetime media table contextmenu paste code'
+#     ],
+#     'toolbar': 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+#     'theme': 'modern',
+#     'cleanup_on_startup': True,
+#     'custom_undo_redo_levels': 10,
+# }
+# TINYMCE_SPELLCHECKER = True
+# TINYMCE_COMPRESSOR = True

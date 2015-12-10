@@ -1,5 +1,5 @@
 from django.contrib import admin
-#from .forms import SettingForm
+
 from .models import *
 
 class CategoryAdmin(admin.ModelAdmin):
